@@ -14,10 +14,386 @@ src: url(../fonts/ptsans-700.woff2) format("woff2");
 font-display: swap;
 }
 
-body{
- font-family: "PT Sans", sans-serif;
- font-size: 18px;
- line-height: 26px;
- color: #000;
- background-color: #fff;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+body{
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #fff;
+}
+
+
+/* Секция header*/
+
+.page-header{
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+
+.logo-link{}
+
+.logo{}
+
+
+/*Навигация*/
+
+.navigation{}
+
+.list-reset{}
+
+.navigation-list{
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+
+.navigation-list-item{}
+
+.navigation-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-link-current{}
+
+
+.navigation-user{}
+
+
+.navigation-user-item{}
+
+.navigation-user-link{
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation-user-link-favorites{}
+
+.notification-badge{}
+
+/* Кнопка ХОЧУ СЮДА!*/
+
+.button{}
+
+.header-button{
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color:#756157;
+  color: #ffffff;
+}
+
+
+/*main*/
+
+.main{
+ color: #000000;
+ background-color: #fff;
+ font-style: normal;
+}
+
+.main-index{}
+
+/*Секция HERO*/
+.hero{
+  background-image:url(../images/mountains.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+
+.hero-image{}
+
+.advantages{
+  text-align: center;
+}
+
+.advantages-header{}
+
+.advantages-slogan{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.advantages-text{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+}
+.advantages-list{}
+.list-reset{}
+.advantages-item{
+  background-color:rgba(131, 179, 211, 0.12) ;
+}
+
+.advantages-item-road{
+ background-color: rgba(131, 179, 211, 0.20);
+}
+.advantages-item-full{
+  background-color: #82B3D3;
+  color:#ffffff;
+}
+.advantages-content{}
+
+.advantages-title{
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.advantages-description{
+  font-weight: 400;
+}
+
+.advantages-img{}
+
+/*Секция инфраструктура*/
+
+.infrastructure{
+  font-style: normal;
+  text-align: center;
+}
+.infrastructure-header{}
+.infrastructure-slogan{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.infrastructure-text{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.infrastructure-list{}
+
+.infrastructure-item{}
+
+.infrastructure-item-house{
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.infrastructure-title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.infrastructure-description{
+font-weight: 400;
+}
+.infrastructure-item-food{}
+
+.infrastructure-item-souvenirs{
+   background-color: rgba(131, 179, 211, 0.12);
+}
+
+/*Секция поиск*/
+.search{
+  font-style: normal;
+}
+.search-title{
+ font-size: 30px;
+ font-weight: 700;
+ line-height: 36px;
+ text-transform: uppercase;
+}
+.search-description{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.search-button{
+   font-size: 20px;
+  line-height: 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color:#756157;
+  color: #ffffff;
+}
+
+/*Секция подписаться*/
+.subscribe{
+  background-image: url(../images/canyon.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  color: #ffffff;
+  font-style: normal;
+}
+.subscribe-home{}
+
+.subscribe-title{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.subscribe-text{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.subscribe-form{}
+
+.subscribe-input{}
+
+.field{}
+
+.subscribe-button{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  background:  #82B3D3;
+  color: #ffffff;
+}
+
+.button-light{}
+
+
+/*Сeкция Footer*/
+.page-footer{
+  text-align: center;
+  font-style: normal;
+}
+.footer-social{}
+
+.social{}
+
+.list-reset{}
+
+.social-item{}
+
+.social-link{}
+
+.footer-contacts-phono{
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-logo{}
+
+/*КАТАЛОГ*/
+
+.wrapper{}
+
+/*Секция header*/
+.page-header{}
+.logo-link{}
+.logo{}
+
+/*Секция main*/
+.main-inner{}
+.catalog{}
+.catalog-header{}
+.catalog-header-title{}
+.breadcrumbs{}
+.list-reset{}
+.breadcrumbs-item{}
+.breadcrumbs-link {}
+.breadcrumbs-link-home{}
+.visually-hidden{}
+.breadcrumbs-link-current{}
+
+.catalog-filter{}
+.filter{}
+.filter-form{}
+.filter-group{}
+.filter-group-check{}
+.filter-title{}
+.filter-list{}
+.control-list{}
+.list-reset{}
+.control-item{}
+.control-label{}
+.control-input{}
+.control-text{}
+.catalog-item{}
+.filter-group-radio{}
+.catalog-filter-title{}
+.filter-group-range{}
+.range{}
+.range-input-container{}
+.range-item{}
+.form-input{}
+.range-input{}
+.range-input-min{}
+.range-input-max{}
+.range-scale{}
+.range-bar
+.range-toggle-btn{}
+.range-toggle-btn-min{}
+.range-toggle-btn-max{}
+.filter-buttons{}
+.filter-submit{}
+.button-light{}
+.filter-reset{}
+.button-transparent{}
+
+/*Карточки гостиниц*/
+
+.catalog-hotel{}
+.catalog-sorting{}
+.sorting{}
+.sorting-title{}
+.select-control{}
+.sorting-view{}
+.view{}
+.view-link{}
+.view-link-tile{}
+.view-link-active{}
+.view-link-slideshow{}
+.catalog-hotels{}
+.hotels{}
+.list-reset{}
+.hotels-item{}
+.hotels-title{}
+.hotels-text{}
+.hotels-text-type{}
+.hotels-text-price{}
+.hotels-button{}
+.hotels-button-more{}
+.button-light{}
+.hotels-favorites{}
+.hotels-rating-star{}
+.hotels-rating-text{}
+.hotels-favorites-active{}
+.hotels-rating-star{}
+.hotels-rating-star-4{}
+
+/*Пагинация*/
+
+.catalog-pagination{}
+.pagination{}
+.pagination-list{}
+.pagination-item{}
+.pagination-link{}
+.pagination-link-current{}
+.pagination-link-more{}
+
+
+
