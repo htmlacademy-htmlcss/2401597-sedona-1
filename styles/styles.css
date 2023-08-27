@@ -195,11 +195,7 @@ body {
 }
 
 /*.navigation-link-current{}
-
-
 .navigation-user{}
-
-
 .navigation-user-item{}*/
 
 .navigation-user-link {
@@ -208,9 +204,7 @@ body {
 }
 
 /*.navigation-user-link-favorites{}
-
 .notification-badge{}*/
-
 /* Кнопка ХОЧУ СЮДА!*/
 
 .header-button {
@@ -262,6 +256,7 @@ body {
 
 /*.advantages-list{}
 .list-reset{}*/
+
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -299,6 +294,7 @@ body {
 }
 
 /*.infrastructure-header{}*/
+
 .infrastructure-slogan {
   font-weight: 700;
   font-size: 30px;
@@ -313,7 +309,6 @@ body {
 }
 
 /*.infrastructure-list{}
-
 .infrastructure-item{}*/
 
 .infrastructure-item-house {
@@ -394,9 +389,7 @@ body {
 }
 
 /*.subscribe-form{}
-
 .subscribe-input{}
-
 .field{}*/
 
 .subscribe-button {
@@ -419,13 +412,9 @@ body {
 }
 
 /*.footer-social{}
-
 .social{}
-
 .list-reset{}
-
 .social-item{}
-
 .social-link{}*/
 
 .footer-contacts-phono {
@@ -540,7 +529,6 @@ body {
 }
 
 /*.select-control{}*/
-
 /*.sorting-view{}*/
 /*.view{}*/
 /*.view-link{}*/
