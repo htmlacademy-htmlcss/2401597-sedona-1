@@ -299,12 +299,14 @@ body {
 /*.infrastructure-text {}*/
 /*.infrastructure-list{}*/
 /*.list-reset{}*/
-/*.infrastructure-item{}*/
-/*.infrastructure-item-house {}*/
 
-.infrastructure-title {
+.infrastructure-item {
   background-color: rgba(131, 179, 211, 0.12);
 }
+
+/*.infrastructure-item-house {}*/
+
+/*.infrastructure-title {}*/
 
 .infrastructure-item:nth-child(2n) {
   background-color: #ffffff;
@@ -349,6 +351,7 @@ body {
   background-image: url("../images/canyon.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  background-size: cover;
 }
 
 /*.subscribe-title {}*/
