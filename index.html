@@ -4,17 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
   <div class="wrapper">
+
+    <!--Шапка-->
+
     <header class="page-header">
       <a class="logo-link" href="index.html" aria-current="page">
-        <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Sedona">
+        <img class="logo" src="images/svg/logo-sedona.svg" width="140" height="70" alt="Логотип Sedona">
       </a>
+
+      <!--Навигация-->
+
       <nav class="navigation">
+
         <ul class="navigation-list list-reset">
           <li class="navigation-list-item">
+
             <a class="navigation-link navigation-link-current" href="index.html" aria-current="page">Главная</a>
           </li>
           <li class="navigation-list-item">
@@ -42,6 +51,8 @@
       <a class="button header-button" href="#">Хочу сюда!</a>
     </header>
 
+    <!--Главный заголовок-->
+
     <main class="main main-index">
       <h1 class="visually-hidden">Седона-городок в Аризоне</h1>
 
@@ -49,14 +60,14 @@
 
       <section class="hero">
         <h2 class="visually-hidden">Седона</h2>
-        <img class="hero-image" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+        <img class="hero-image" src="images/svg/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
       </section>
-
+      <!--Преимущества-->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="advantages-header">
-          <p class="advantages-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="advantages-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <p class="advantages-slogan page-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="advantages-text page-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <ul class="advantages-list list-reset">
           <li class="advantages-item advantages-item-full">
@@ -65,7 +76,7 @@
               <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <figure class="advantages-img">
-              <img src="images/jpg/real-town.jpg" width="800" height="385" alt="Отель на фоне гор">
+              <img src="images/real-town.jpg" width="800" height="385" alt="Отель на фоне гор">
             </figure>
           </li>
           <li class="advantages-item">
@@ -74,7 +85,7 @@
               <p class="advantages-description">Все достопримечательности находятся очень близко</p>
             </div>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item ">
             <div class="advantages-content">
               <h3 class="advantages-title">Красивая дорога</h3>
               <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
@@ -92,7 +103,7 @@
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
             <figure class="advantages-img">
-              <img src="images/jpg/devils-bridge.jpg" width="800" height="385" alt="Каньен, горы">
+              <img src="images/devils-bridge.jpg" width="800" height="385" alt="Каньен, горы">
             </figure>
           </li>
         </ul>
@@ -103,10 +114,10 @@
       <section class="infrastructure">
         <h2 class="visually-hidden">Инфраструктура</h2>
         <div class="infrastructure-header">
-          <p class="infrastructure-slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-          <p class="infrastructure-text">Опытный персонал и качественное обслуживание!</p>
+          <p class="infrastructure-slogan page-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+          <p class="infrastructure-text page-text">Опытный персонал и качественное обслуживание!</p>
         </div>
-        <ul class="infrastructure-list">
+        <ul class="infrastructure-list list-reset">
           <li class="infrastructure-item infrastructure-item-house">
             <h3 class="infrastructure-title">Жильё</h3>
             <p class="infrastructure-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -125,16 +136,16 @@
       <!--Секция поиск-->
 
       <section class="search">
-        <h2 class="search-title">Заинтересовались?</h2>
-        <p class="search-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшиe предложения гостиниц в Седоне</p>
+        <h2 class="search-title page-title">Заинтересовались?</h2>
+        <p class="search-description page-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшиe предложения гостиниц в Седоне</p>
         <a class="search-button button" href="#">Поиск гостиницы в седоне</a>
       </section>
 
       <!--Секция подписаться-->
 
       <section class="subscribe subscribe-home">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <h2 class="subscribe-title page-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-text">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="subscribe-form" action="//echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
           <input class="subscribe-input field" id="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
@@ -146,7 +157,7 @@
     <!--Сeкция Footer-->
 
     <footer class="page-footer">
-      <h2 class="visuallu-hidden">Социальные сети</h2>
+      <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="footer-social social list-reset">
         <li class="social-item">
           <a class="social-link" href="https://vk.com/htmlacademy">
@@ -169,7 +180,7 @@
       </ul>
       <a class="footer-contacts-phono" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="footer-logo" href="https://htmlacademy.ru/">
-        <img src="images/Logo-ahtml-acfdemy.svg" width="115" height="33" alt="Логотип HTMLAcademy">
+        <img src="images/svg/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTMLAcademy">
         <span class="visually-hidden">Сайт разработчика</span>
       </a>
     </footer>
