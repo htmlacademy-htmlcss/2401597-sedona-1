@@ -124,11 +124,11 @@
               <div class="range">
                 <div class="range-input-container">
                   <div class="range-item">
-                    <input class="form-input range-input range-input-min" id="min-price" name="min-price" type="number" placeholder="0" value="0" min="0" max="9000">
+                    <input class="field range-input range-input-min" id="min-price" name="min-price" type="number" placeholder="0" value="0" min="0" max="9000">
                     <label for="min-price">от</label>
                   </div>
                   <div class="range-item">
-                    <input class="form-input range-input range-input-max" id="max-price" name="max-price" type="number" placeholder="9000" value="9000" min="1" max="9000">
+                    <input class="field range-input range-input-max" id="max-price" name="max-price" type="number" placeholder="9000" value="9000" min="1" max="9000">
                     <label for="max-price">до</label>
                   </div>
                 </div>
@@ -157,9 +157,9 @@
 
       <section class="catalog-hotel">
         <div class="catalog-sorting sorting">
-          <h2 class="sorting-title">Найдено гостиниц: 38</h2>
+          <h2 class="sorting-title page-title">Найдено гостиниц: 38</h2>
           <select class="select-control" aria-label="Сортировка">
-            <option value="sorting-cheap" selected>Сначало дешовые</option>
+            <option value="sorting-cheap" selected>Сначало дешевые</option>
             <option value="sorting-expensive">Сначало дорогие</option>
           </select>
           <div class="sorting-view view">
@@ -179,8 +179,10 @@
           <h2 class="visually-hidden">Список отелей</h2>
           <ul class="hotels-list list-reset">
             <li class="hotels-item">
-              <img src="images/catalog-hotel/hotel-1.jpg" alt="Amara Resort & Spa" width="300" height="212">
-              <h3 class="hotels-title">Amara Resort &amp; Spa</h3>
+              <a class="hotels-link" href="#">
+                <img src="images/catalog-hotel/hotel-1.jpg" alt="Amara Resort & Spa" width="300" height="212">
+                <h3 class="hotels-title">Amara Resort &amp; Spa</h3>
+              </a>
               <p class="hotels-text hotels-text-type">Гостиница</p>
               <p class="hotels-text hotels-text-price">От 4000 ₽</p>
               <a class="button hotels-button hotels-button-more" href="#">Подробнее</a>
@@ -239,7 +241,7 @@
         </div>
         <!--Пагинация-->
         <div class="catalog-pagination pagination">
-          <ul class="pagination-list">
+          <ul class="pagination-list list-reset ">
             <li class="pagination-item">
               <a class="pagination-link pagination-link-current" href="#" aria-current="page">1</a>
             </li>
@@ -265,8 +267,8 @@
       <!--Секция подписаться-->
 
       <section class="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <h2 class="subscribe-title page-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-text page-text">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="subscribe-form" action="//echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
           <input class="subscribe-input field" id="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
