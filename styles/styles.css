@@ -27,6 +27,8 @@ html {
 }
 
 body {
+  width: 1280px;
+  height: 100%;
   margin: 0;
 
   font-size: 18px;
@@ -35,6 +37,16 @@ body {
   color: #333333;
 
   background-color: #f2f2f2;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 1200px;
+  min-height: 100%;
 }
 
 .visually-hidden {
@@ -184,7 +196,14 @@ body {
 
 /* Шапка*/
 
-/*.page-header {}*/
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1200px;
+  height: 64px;
+  padding: 0 70px;
+}
 
 /*.logo-link{}
 
@@ -192,9 +211,12 @@ body {
 
 /*Навигация*/
 
-/*.navigation{}*/
+/*.navigation {}*/
 
-/*.navigation-list {}*/
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
 
 /*.navigation-list-item{}*/
 
@@ -225,7 +247,10 @@ body {
 
 /*Главный заголовок*/
 
-/*.main {}*/
+.main {
+  flex-grow: 1;
+}
+
 /*.main-index{}*/
 /*Секция hero*/
 
@@ -243,16 +268,31 @@ body {
 /* Преимущества */
 
 .advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   text-align: center;
 }
 
-/*.advantages-header{}*/
+.advantages-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  /*padding: 69px 0;*/
+
+  /*gap: 25px;*/
+}
+
 /*.page-title{}*/
 
 /*.advantages-slogan {}*/
 /*.page-text{}*/
 /*.advantages-text {}*/
-/*/*.advantages-list{}*/
+/*.advantages-list {}*/
+
 /*.list-reset{}*/
 
 .advantages-item {
@@ -269,7 +309,16 @@ body {
   background-color: #82b3d3;
 }
 
-/*.advantages-content{}*/
+.advantages-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  /*height: 385px;*/
+  /*padding: 103px 85px;*/
+  /*gap: 10px;*/
+}
 
 .advantages-title {
   margin: 0;
@@ -289,15 +338,31 @@ body {
   margin: 0;
 }
 
-/*.advantages-img{}*/
+.advantages-img {
+  align-self: stretch;
+  width: 800px;
+}
 
 /*Секция инфраструктура*/
 
-/*.infrastructure {}*/
-/*.infrastructure-header{}*/
+.infrastructure-header {
+  display: flex;
+  /*padding: 64px 0px;*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*gap: 20px;*/
+  align-self: stretch;
+}
+
 /*.infrastructure-slogan {}*/
 /*.infrastructure-text {}*/
-/*.infrastructure-list{}*/
+
+.infrastructure-list {
+  display: flex;
+  align-items: flex-start;
+}
+
 /*.list-reset{}*/
 
 .infrastructure-item {
@@ -308,7 +373,7 @@ body {
 
 /*.infrastructure-title {}*/
 
-.infrastructure-item:nth-child(2n) {
+.nfrastructure-item:nth-child(2n) {
   background-color: #ffffff;
 }
 
@@ -330,8 +395,14 @@ body {
 /*.infrastructure-item-souvenirs {}*/
 
 /*Секция поиск*/
+.search {
+  display: flex;
+  /*padding: 96px 304px;*/
+  flex-direction: column;
+  align-items: flex-start;
+  /*gap: 10px;*/
+}
 
-/*.search {}*/
 /*.search-title {}*/
 /*.search-description {}*/
 
@@ -342,7 +413,14 @@ body {
 
 /*Секция подписаться*/
 
-/*.subscribe {}*/
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*padding: 96px 258px 104px 258px;*/
+  /*gap: 10px;*/
+}
 
 .subscribe-home {
   color: #ffffff;
@@ -350,7 +428,6 @@ body {
   background-color: #5c84ab;
   background-image: url("../images/canyon.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
   background-size: cover;
 }
 
@@ -375,7 +452,15 @@ body {
 
 /*Сeкция Footer*/
 
-/*.page-footer {}*/
+.page-footer {
+  display: flex;
+  /*height: 120px;*/
+  /*padding: 40px 70px 30px 70px;*/
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+}
+
 /*.footer-social{}
 .social{}
 .list-reset{}
@@ -394,8 +479,6 @@ body {
 
 /*КАТАЛОГ*/
 
-/*.wrapper{}*/
-
 /*Секция main*/
 
 /*.main-inner{}*/
@@ -408,7 +491,13 @@ body {
   background-size: cover;
 }
 
-/*.catalog-header{}*/
+.catalog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*gap: 8px;*/
+  align-self: stretch;
+}
 
 .catalog-header-title {
   margin: 0;
@@ -432,7 +521,16 @@ body {
 /*.breadcrumbs-link-home*/
 /*.breadcrumbs-item{}*/
 /*.breadcrumbs-link-current{}*/
-/*.catalog-filter{}*/
+
+.catalog-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 1200px;
+  /*padding: 35px 70px 70px 70px;*/
+  /*gap: 10px;*/
+}
+
 /*.filter{}*/
 /*.filter-form{}*/
 
@@ -478,8 +576,22 @@ body {
 
 /*Карточки гостиниц*/
 
-/*.catalog-hotel{}*/
-/*.catalog-sorting{}*/
+.catalog-hotel {
+  display: flex;
+  /*padding: 50px 70px 60px 70px;*/
+  flex-direction: column;
+  align-items: flex-end;
+  /*gap: 40px;*/
+  align-self: stretch;
+}
+
+.catalog-sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
 /*.sorting{}*/
 /*.sorting-title {}*/
 /*.select-control{}*/
@@ -490,7 +602,15 @@ body {
 /*.view-link-active{}*/
 /*.view-link-slideshow{}*/
 /*.catalog-hotels{}*/
-/*.hotels{}*/
+
+.hotels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  /*gap: 20px;*/
+}
+
 /*.list-reset{}*/
 /*.hotels-item {}*/
 
@@ -531,9 +651,21 @@ body {
 
 /*Пагинация*/
 
-/*.catalog-pagination{}*/
-/*.pagination{}*/
-/*.pagination-list{}*/
+.catalog-pagination {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+/*.pagination {}*/
+
+.pagination-list {
+  display: flex;
+  align-items: flex-start;
+
+  /*gap: 8px;*/
+}
+
 /*.pagination-item{}*/
 
 .pagination-link {
