@@ -1,0 +1,200 @@
+:root {
+  --outline-1-enabled: 1;
+  --outline-2-enabled: 1;
+  --outline-3-enabled: 1;
+  --outline-4-enabled: 1;
+  --outline-5-enabled: 0;
+  --outline-6-enabled: 0;
+  --outline-hint-scale: 1;
+  --outlines-shown: 1;
+}
+
+body,
+body > *,
+body > * > *,
+body > * > * > *,
+body > * > * > * > *,
+body > * > * > * > * > *,
+body > * > * > * > * > * > * {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before,
+body > * > * > * > *::before,
+body > * > * > * > * > *::before,
+body > * > * > * > * > * > *::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+  padding: 0 10px 2px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Courier New", monospace;
+  text-transform: lowercase;
+  letter-spacing: initial;
+  white-space: nowrap;
+  transform: scale(var(--outline-hint-scale, 1));
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+body > *::after,
+body > * > *::after,
+body > * > * > *::after,
+body > * > * > * > *::after,
+body > * > * > * > * > *::after,
+body > * > * > * > * > * > *::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* 1 уровень сеточных блоков */
+
+body > *::before,
+body > *::after {
+  z-index: 1;
+  --outline-alpha-1: calc(
+    var(--outline-1-enabled, 0) * var(--outlines-shown, 0)
+  );
+}
+
+body > *::before {
+  content: var(--hint-text);
+  color: rgba(255, 255, 255, var(--outline-alpha-1));
+  background: rgba(76, 169, 255, calc(0.7 * var(--outline-alpha-1)));
+
+  --hint-text: 'class="'attr(class) '"';
+}
+
+body > *::after {
+  background: rgba(76, 169, 255, calc(0.1 * var(--outline-alpha-1)));
+
+  border: 2px solid rgba(76, 169, 255, calc(0.7 * var(--outline-alpha-1)));
+}
+
+/* 2 уровень сеточных блоков */
+
+body > * > *::before,
+body > * > *::after {
+  z-index: 2;
+  --outline-alpha-2: calc(
+    var(--outline-2-enabled, 0) * var(--outlines-shown, 0)
+  );
+}
+
+body > * > *::before {
+  content: var(--hint-text);
+  color: rgba(255, 255, 255, var(--outline-alpha-2));
+  background: rgba(255, 107, 0, calc(0.7 * var(--outline-alpha-2)));
+
+  --hint-text: 'class="'attr(class) '"';
+}
+
+body > * > *::after {
+  background: rgba(255, 107, 0, calc(0.1 * var(--outline-alpha-2)));
+
+  border: 2px solid rgba(255, 107, 0, calc(0.7 * var(--outline-alpha-2)));
+}
+
+/* 3 уровень сеточных блоков */
+
+body > * > * > *::before,
+body > * > * > *::after {
+  z-index: 3;
+  --outline-alpha-3: calc(
+    var(--outline-3-enabled, 0) * var(--outlines-shown, 0)
+  );
+}
+
+body > * > * > *::before {
+  content: var(--hint-text);
+  color: rgba(255, 255, 255, var(--outline-alpha-3));
+  background: rgba(116, 76, 230, calc(0.7 * var(--outline-alpha-3)));
+
+  --hint-text: 'class="'attr(class) '"';
+}
+
+body > * > * > *::after {
+  background: rgba(116, 76, 230, calc(0.1 * var(--outline-alpha-3)));
+
+  border: 2px solid rgba(116, 76, 230, calc(0.7 * var(--outline-alpha-3)));
+}
+
+/* 4 уровень сеточных блоков */
+
+body > * > * > * > *::before,
+body > * > * > * > *::after {
+  z-index: 4;
+  --outline-alpha-4: calc(
+    var(--outline-4-enabled, 0) * var(--outlines-shown, 0)
+  );
+}
+
+body > * > * > * > *::before {
+  content: var(--hint-text);
+  color: rgba(255, 255, 255, var(--outline-alpha-4));
+  background: rgba(78, 181, 67, calc(0.7 * var(--outline-alpha-4)));
+
+  --hint-text: 'class="'attr(class) '"';
+}
+
+body > * > * > * > *::after {
+  background: rgba(78, 181, 67, calc(0.1 * var(--outline-alpha-4)));
+
+  border: 2px solid rgba(78, 181, 67, calc(0.7 * var(--outline-alpha-4)));
+}
+
+/* 5 уровень сеточных блоков */
+body > * > * > * > * > *::before,
+body > * > * > * > * > *::after {
+  z-index: 5;
+  --outline-alpha-5: calc(
+    var(--outline-5-enabled, 0) * var(--outlines-shown, 0)
+  );
+}
+
+body > * > * > * > * > *::before {
+  content: var(--hint-text);
+  color: rgba(255, 255, 255, var(--outline-alpha-5));
+  background: rgba(239, 51, 255, calc(0.7 * var(--outline-alpha-5)));
+
+  --hint-text: 'class="'attr(class) '"';
+}
+
+body > * > * > * > * > *::after {
+  background: rgba(239, 51, 255, calc(0.1 * var(--outline-alpha-5)));
+
+  border: 2px solid rgba(239, 51, 255, calc(0.7 * var(--outline-alpha-5)));
+}
+
+/* 6 уровень сеточных блоков */
+body > * > * > * > * > * > *::before,
+body > * > * > * > * > * > *::after {
+  z-index: 6;
+  --outline-alpha-6: calc(
+    var(--outline-6-enabled, 0) * var(--outlines-shown, 0)
+  );
+}
+
+body > * > * > * > * > * > *::before {
+  content: var(--hint-text);
+  color: rgba(255, 255, 255, var(--outline-alpha-6));
+  background: rgba(255, 191, 0, calc(0.7 * var(--outline-alpha-6)));
+
+  --hint-text: 'class="'attr(class) '"';
+}
+
+body > * > * > * > * > * > *::after {
+  background: rgba(255, 191, 0, calc(0.1 * var(--outline-alpha-6)));
+
+  border: 2px solid rgba(255, 191, 0, calc(0.7 * var(--outline-alpha-6)));
+}
