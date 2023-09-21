@@ -385,13 +385,11 @@ body {
 .advantages-content {
   width: 400px;
   min-height: 385px;
+  padding: 115px 85px 100px;
 }
 
 .advantages-title {
-  width: 175px;
-  margin: 0;
-  margin: 0 auto;
-  padding-top: 103px;
+  margin: 0 0 30px;
   padding-bottom: 30px;
 
   font-weight: 700;
@@ -408,12 +406,10 @@ body {
 .advantages-description {
   width: 230px;
   margin: 0;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 103px;
 }
 
 .advantages-img {
+  max-width: 800px;
   margin: 0;
 }
 
@@ -448,20 +444,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 85px;
+  min-height: 385px;
+  padding: 80px 85px 20px;
 
   background-color: rgba(131, 179, 211, 0.12);
   background-repeat: no-repeat;
-  background-position-x: center;
-}
-
-.nfrastructure-item:nth-child(2n) {
-  background-color: #ffffff;
+  background-position: top 80px center;
 }
 
 .infrastructure-title {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
+  margin-bottom: 0;
+  padding: 30px;
 
   font-weight: 700;
   font-size: 24px;
@@ -479,6 +473,7 @@ body {
 }
 
 .infrastructure-item-food {
+  background-color: #ffffff;
   background-image: url("/images/svg/burger-icon.svg");
 }
 
@@ -488,13 +483,18 @@ body {
 
 /*Секция поиск*/
 .search {
-  padding: 96px 70px;
+  padding: 96px 304px;
 
   text-align: center;
 }
 
-/*.search-title {}*/
-/*.search-description {}*/
+.search-title {
+  margin-bottom: 20px;
+}
+
+.search-description {
+  padding-bottom: 54px;
+}
 
 .search-button {
   font-size: 20px;
