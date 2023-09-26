@@ -236,6 +236,8 @@ body {
 /*.navigation-list-item{}*/
 
 .navigation-link {
+  position: relative;
+
   display: inline-block;
 
   font-weight: 700;
@@ -245,7 +247,16 @@ body {
   text-decoration: none;
 }
 
-/*.navigation-link-current{}*/
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+
+  width: 68px;
+  height: 2px;
+
+  background: #756257;
+}
 
 .navigation-user {
   display: flex;
@@ -334,6 +345,7 @@ body {
 
 .page-title {
   margin: 0;
+  padding-bottom: 25px;
 
   font-weight: 700;
   font-size: 30px;
@@ -383,12 +395,20 @@ body {
 }
 
 .advantages-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   min-height: 385px;
   padding: 115px 85px 100px;
+
+  gap: 30px;
 }
 
 .advantages-title {
+  position: relative;
+
   margin: 0 0 30px;
   padding-bottom: 30px;
 
@@ -397,6 +417,18 @@ body {
   line-height: 28px;
   color: #000000;
   text-transform: uppercase;
+}
+
+.advantages-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+
+  width: 60px;
+  height: 2px;
+
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item-full .advantages-title {
@@ -745,6 +777,15 @@ body {
   appearance: none;
 }
 
+.select-control:hover {
+  border-color: #68a2ca;
+}
+
+.select-control:focus {
+  border-color: #3f5e72;
+  outline: none;
+}
+
 /*.sorting-view{}*/
 .view {
   display: grid;
@@ -846,22 +887,28 @@ body {
 .hotels-rating-star {
   display: block;
   height: 37px;
+  /*background-image: url("../images/svg/icon-stars.svg");*/
 
-  background-image: url("../images/svg/icon-stars.svg");
   background-repeat: no-repeat;
   background-position: left center;
 }
 
 .hotels-rating-star-4 {
   width: 90px;
+
+  background-image: url("/images/svg/star4.svg");
 }
 
 .hotels-rating-star-3 {
   width: 70px;
+
+  background-image: url("/images/svg/star3.svg");
 }
 
 .hotels-rating-star-2 {
   width: 50px;
+
+  background-image: url("/images/svg/star2.svg");
 }
 
 /*.hotels-text-type{}*/
