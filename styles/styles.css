@@ -281,11 +281,11 @@ body {
 }
 
 .navigation-user-link-search {
-  background-image: url(/images/svg/search.svg);
+  background-image: url("../images/svg/search.svg");
 }
 
 .navigation-user-link-favorites {
-  background-image: url("/images/svg/heart.svg");
+  background-image: url("../images/svg/heart.svg");
 }
 
 .notification-badge {
@@ -481,6 +481,10 @@ body {
   background-position: top 80px center;
 }
 
+.infrastructure-item:nth-child(2n) {
+  background-color: #ffffff;
+}
+
 .infrastructure-title {
   margin: 0 0 30px;
   margin-bottom: 0;
@@ -498,16 +502,15 @@ body {
 }
 
 .infrastructure-item-house {
-  background-image: url("/images/svg/housing-icon.svg");
+  background-image: url("../images/svg/housing-icon.svg");
 }
 
 .infrastructure-item-food {
-  background-color: #ffffff;
-  background-image: url("/images/svg/burger-icon.svg");
+  background-image: url("../images/svg/burger-icon.svg");
 }
 
 .infrastructure-item-souvenirs {
-  background-image: url("/images/svg/souvenir-icon.svg");
+  background-image: url("../images/svg/souvenir-icon.svg");
 }
 
 /*Секция поиск*/
@@ -652,7 +655,7 @@ body {
   width: 7px;
   height: 10px;
 
-  background-image: url("../images/svg/Vector.svg");
+  background-image: url("../images/svg/arrow-right.svg");
   background-repeat: no-repeat;
   transform: translateY(-50%);
 }
@@ -812,17 +815,17 @@ body {
 }
 
 .view-link-tile {
-  background-image: url("/images/svg/vector-1.svg");
+  background-image: url("../images/svg/icon-tile.svg");
 }
 
 /*.view-link-active {}*/
 
 .view-link-slideshow {
-  background-image: url("/images/svg/one-tile.svg");
+  background-image: url("../images/svg/icon-slideshow.svg");
 }
 
 .view-link-list {
-  background-image: url("/images/svg/list.svg");
+  background-image: url("../images/svg/icon-list.svg");
 }
 
 /*.catalog-hotels{}*/
@@ -891,26 +894,21 @@ body {
   display: block;
   height: 37px;
 
+  background-image: url("../images/svg/star4.svg");
   background-repeat: no-repeat;
   background-position: left center;
 }
 
 .hotels-rating-star-4 {
   width: 90px;
-
-  background-image: url("/images/svg/star4.svg");
 }
 
 .hotels-rating-star-3 {
   width: 70px;
-
-  background-image: url("/images/svg/star3.svg");
 }
 
 .hotels-rating-star-2 {
   width: 50px;
-
-  background-image: url("/images/svg/star2.svg");
 }
 
 /*.hotels-text-type{}*/
