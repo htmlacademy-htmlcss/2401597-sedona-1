@@ -228,17 +228,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px 16px;
 
   gap: 8px;
 }
 
-/*.navigation-list-item{}*/
+.navigation-list-item {
+  padding: 20px 16px;
+}
 
 .navigation-link {
-  position: relative;
-
   display: inline-block;
+  padding-top: 19px;
 
   font-weight: 700;
   font-size: 20px;
@@ -247,26 +247,23 @@ body {
   text-decoration: none;
 }
 
-.navigation-link-current::before {
-  content: "";
-  position: absolute;
-  bottom: -23px;
+.navigation-link-current {
+  text-decoration: underline;
 
-  width: 68px;
-  height: 2px;
-
-  background: #756257;
+  text-decoration-color: #756257;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 20px;
 }
 
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  gap: 20px;
 }
 
 .navigation-user-item {
+  padding: 0 12px;
+
   text-align: right;
 }
 
@@ -804,8 +801,14 @@ body {
   background-position: center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  outline: 2px solid rgba(47, 177, 15, 0.5);
-  outline-offset: -5px;
+}
+
+.view-link:hover {
+  border: 2px solid #000000;
+}
+
+.view-link:focus {
+  border: 2px solid #68a2ca;
 }
 
 .view-link-tile {
@@ -887,7 +890,6 @@ body {
 .hotels-rating-star {
   display: block;
   height: 37px;
-  /*background-image: url("../images/svg/icon-stars.svg");*/
 
   background-repeat: no-repeat;
   background-position: left center;
@@ -946,7 +948,15 @@ body {
   gap: 8px;
 }
 
-/*.pagination-item{}*/
+.pagination-item:hover {
+  background-color: #68a2ca;
+  border-radius: 4px;
+}
+
+.pagination-item:focus {
+  background-color: #68a2ca;
+  border-radius: 4px;
+}
 
 .pagination-link {
   display: flex;
@@ -1007,8 +1017,6 @@ body {
 
 /*.list-reset {}*/
 
-/*.social-item{}*/
-
 .social-link {
   display: flex;
   justify-content: center;
@@ -1019,10 +1027,26 @@ body {
   color: #82b3d3;
 }
 
+.social-link:hover {
+  background-color: #68a2ca;
+}
+
+.social-link:focus {
+  background-color: #756157;
+}
+
 .footer-contacts-phono {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-contacts-phono:hover {
+  color: #756157;
+}
+
+.footer-contacts-phono:focus {
+  color: #756157;
 }
