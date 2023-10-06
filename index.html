@@ -138,6 +138,7 @@
 
       <section class="search">
         <h2 class="search-title page-title">Заинтересовались?</h2>
+
         <p class="search-description page-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшиe предложения гостиниц в Седоне</p>
         <a class="search-button button" href="#">Поиск гостиницы в седоне</a>
       </section>
@@ -191,7 +192,7 @@
       </ul>
       <a class="footer-contacts-phono" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="footer-logo" href="https://htmlacademy.ru/">
-        <!--<img src="images/svg/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTMLAcademy">-->
+
         <span class="visually-hidden">Сайт разработчика</span>
         <svg width="115" height="34" viewBox="0 0 115 34" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="currentColor" />
@@ -210,7 +211,78 @@
 
       </a>
     </footer>
+
+    <!--Модальное окно-->
+
+    <div class="modal-container modal-container-close" data-test="modal">
+      <div class="modal modal-searh">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title page-title">Поиск гостиниц в Седоне</h2>
+          <form class="modal-content form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <fieldset class="form-group date">
+              <label class="form-label date-label" for="arrival-date">Дата Заезда:</label>
+              <div class="date-input-icon">
+                <input class="date-input form-input" type="text" name="arrival-date" id="arrival-date" placeholder="Укажите дату" value="27 апреля 2020" required>
+                <span class="icon-imput"></span>
+              </div>
+              <span class="form-message form-message-error">Мы не можем отправить вас в прошлое.</span>
+            </fieldset>
+            <fieldset class="form-group date">
+              <label class="form-label date-label" for="departure-date">Дата Выезда:</label>
+              <div class="date-input-icon">
+                <input class="date-input form-input" type="text" name="departure-date" id="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required>
+              </div>
+              <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
+            </fieldset>
+
+            <fieldset class="form-group adults">
+              <label class="form-label adults-label" for="adults">Взрослые:</label>
+              <div class="people-input-container">
+                <button class="people-button people-button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество человек</span>
+                </button>
+                <input class="people-input people-input-adults form-input" id="adults" name="adults" type="number" value="2" required>
+                <button class="people-button people-button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество человек</span>
+                </button>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group children">
+              <div class="tooltip-container">
+                <label class="form-label adults-label" for="children">Дети:</label>
+
+                <div class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="info-label-children">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
+                    </svg>
+                    <span class="visually-hidden">Дополнительная информация.</span>
+                  </button>
+                  <p class="tooltip-text" id="info-label-children">Укажите количество детей которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно. </p>
+                </div>
+              </div>
+              <div class="people-input-container">
+                <button class="people-button people-button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество человек</span>
+                </button>
+                <input class="people-input people-input-children form-input" id="children" name="children" type="number" value="2" required>
+                <button class="people-button people-button-plus" title="button">
+                  <span class="visually-hidden">Увеличить количество человек</span>
+                </button>
+              </div>
+            </fieldset>
+            <button class="modal-button button button-light" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
+
 </body>
 
 </html>
