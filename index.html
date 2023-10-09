@@ -216,27 +216,30 @@
 
     <div class="modal-container modal-container-close" data-test="modal">
       <div class="modal modal-searh">
+
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть модальное окно</span>
         </button>
+
         <section class="modal-content">
           <h2 class="modal-title page-title">Поиск гостиниц в Седоне</h2>
           <form class="modal-content form" action="https://echo.htmlacademy.ru/" method="post">
 
             <fieldset class="form-group date">
               <label class="form-label date-label" for="arrival-date">Дата Заезда:</label>
-              <div class="date-input-icon">
+              <div class="date-input-container">
                 <input class="date-input form-input" type="text" name="arrival-date" id="arrival-date" placeholder="Укажите дату" value="27 апреля 2020" required>
-                <span class="icon-imput"></span>
+
+                <span class="form-message form-message-error">Мы не можем отправить вас в прошлое.</span>
               </div>
-              <span class="form-message form-message-error">Мы не можем отправить вас в прошлое.</span>
             </fieldset>
             <fieldset class="form-group date">
               <label class="form-label date-label" for="departure-date">Дата Выезда:</label>
-              <div class="date-input-icon">
+              <div class="date-input-container">
                 <input class="date-input form-input" type="text" name="departure-date" id="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required>
+
+                <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
               </div>
-              <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
             </fieldset>
 
             <fieldset class="form-group adults">
