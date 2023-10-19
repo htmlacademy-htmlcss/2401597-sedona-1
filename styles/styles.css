@@ -152,7 +152,8 @@ img {
   background-color: #82b3d3;
 }
 
-.button-light:disabled {
+.button-light:disabled,
+.button-light-disabled {
   background-color: #e5e5e5;
 }
 
@@ -208,21 +209,42 @@ img {
 
 .field:hover {
   background-color: #e6e6e6;
-}
-
-.field:focus {
-  border-color: #83b3d3;
-  outline: none;
-}
-
-.field:disabled {
-  border-color: #000000;
+  border-color: #e6e6e6;
 }
 
 .field:focus-visible {
   background-color: #e6e6e6;
+  border-color: #83b3d3;
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .field:focus {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+    outline: none;
+    box-shadow: 0 0 0 3px #83b3d3;
+  }
+}
+
+.field:disabled {
+  opacity: 0.3;
+}
+
+.field-valid {
+  background-color: #ffffff;
+  border-color: #7db54f;
+}
+
+.field-error {
+  border-color: #ff5757;
+}
+
+.field::placeholder {
+  color: #000000;
+
+  opacity: 0.6;
 }
 
 /* Шапка*/
@@ -247,6 +269,24 @@ img {
   height: 70px;
   margin-right: 24px;
   margin-bottom: -6px;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo-link:focus-visible {
+  opacity: 0.6;
+}
+
+@supports not selector(:focus-visible) {
+  .logo-link:focus {
+    opacity: 0.6;
+  }
+}
+
+.logo-link:active {
+  opacity: 0.3;
 }
 
 /*Навигация*/
@@ -281,12 +321,25 @@ img {
   opacity: 0.8;
 }
 
-.navigation-link:focus {
+.navigation-link:focus-visible {
   opacity: 0.6;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-link:focus {
+    opacity: 0.6;
+  }
 }
 
 .navigation-link:active {
   opacity: 0.3;
+}
+
+.navigation-link:focus-visible {
+  background-color: #e6e6e6;
+  border-color: #83b3d3;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
 .navigation-link-current {
@@ -304,18 +357,6 @@ img {
   align-items: center;
 }
 
-.navigation-user:hover {
-  opacity: 0.8;
-}
-
-.navigation-user:focus {
-  opacity: 0.6;
-}
-
-.navigation-user:active {
-  opacity: 0.3;
-}
-
 .navigation-user-link {
   position: relative;
 
@@ -327,6 +368,24 @@ img {
 
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.navigation-user-link:hover {
+  opacity: 0.8;
+}
+
+.navigation-user-link:focus-visible {
+  opacity: 0.6;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-user-link:focus {
+    opacity: 0.6;
+  }
+}
+
+.navigation-user-link:active {
+  opacity: 0.3;
 }
 
 .navigation-user-link-search {
@@ -723,6 +782,24 @@ img {
   text-decoration: none;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.8;
+}
+
+.breadcrumbs-link:focus-visible {
+  opacity: 0.6;
+}
+
+@supports not selector(:focus-visible) {
+  .breadcrumbs-link:focus {
+    opacity: 0.6;
+  }
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
 .breadcrumbs-link-home {
   display: block;
   width: 13px;
@@ -839,13 +916,13 @@ img {
   opacity: 0.6;
 }
 
-.control-input:focus-within .control-input {
+.control-label:focus-visible .control-input {
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
 @supports not selector(:focus-visible) {
-  .control-input:focus .control-input {
+  .control-label:focus .control-input {
     outline: none;
     box-shadow: 0 0 0 3px #83b3d3;
   }
@@ -903,6 +980,7 @@ img {
 
 .range-input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .range-input-min {
@@ -1043,9 +1121,25 @@ img {
   border-color: #68a2ca;
 }
 
-.select-control:focus {
-  border-color: #3f5e72;
+.select-control:focus-visible {
+  border-color: #68a2ca;
   outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .select-control:focus {
+    border-color: #68a2ca;
+    outline: none;
+  }
+}
+
+.select-control:active {
+  border-color: #3f5e72;
+}
+
+.select-control:disabled {
+  border-color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
 }
 
 .view {
@@ -1068,11 +1162,25 @@ img {
 }
 
 .view-link:hover {
+  border-color: 2px solid #000000;
+}
+
+.view-link:focus-visible {
+  border: 2px solid #68a2ca;
+}
+
+@supports not selector(:focus-visible) {
+  .view-link:focus {
+    border: 2px solid #68a2ca;
+  }
+}
+
+.view-link:active {
   border: 2px solid #000000;
 }
 
-.view-link:focus {
-  border: 2px solid #68a2ca;
+.view-link:disabled {
+  border: 2px solid #e5e5e5;
 }
 
 .view-link-tile {
@@ -1124,6 +1232,24 @@ img {
   grid-column: 1/-1;
 }
 
+.hotels-link:hover {
+  opacity: 0.8;
+}
+
+.hotels-link:focus-visible {
+  opacity: 0.6;
+}
+
+@supports not selector(:focus-visible) {
+  .hotels-link:focus {
+    opacity: 0.6;
+  }
+}
+
+.hotels-link:active {
+  opacity: 0.3;
+}
+
 .hotels-link img {
   display: block;
   width: 100%;
@@ -1154,8 +1280,18 @@ img {
   background: #6c9e42;
 }
 
-.hotels-favorites-active:focus {
+.hotels-favorites-active:focus-visible {
+  color: #ffffff;
+
   background: #6c9e42;
+}
+
+@supports not selector(:focus-visible) {
+  .hotels-favorites-active:focus {
+    color: #ffffff;
+
+    background: #6c9e42;
+  }
 }
 
 .hotels-favorites-active:active {
@@ -1233,14 +1369,24 @@ img {
   background-color: #68a2ca;
 }
 
-.pagination-link:focus {
+.pagination-link:focus-visible {
   background-color: #68a2ca;
+}
+
+@supports not selector(:focus-visible) {
+  .pagination-link:focus {
+    background-color: #68a2ca;
+  }
 }
 
 .pagination-link:active {
   color: #e5e5e5;
 
-  background-color: #82b3d3;
+  background-color: #f2f2f2;
+}
+
+.pagination-link:disabled {
+  background-color: #f2f2f2;
 }
 
 .pagination-link-current {
@@ -1292,8 +1438,14 @@ img {
   color: #68a2ca;
 }
 
-.social-link:focus {
+.social-link:focus-visible {
   color: #68a2ca;
+}
+
+@supports not selector(:focus-visible) {
+  .social-link:focus {
+    color: #68a2ca;
+  }
 }
 
 .social-link:active {
@@ -1312,12 +1464,18 @@ img {
   color: #756157;
 }
 
-.footer-contacts-phono:focus {
+.footer-contacts-phono:focus-visible {
   color: #756157;
 }
 
+@supports not selector(:focus-visible) {
+  .footer-contacts-phono:focus {
+    color: #756157;
+  }
+}
+
 .footer-contacts-phono:active {
-  color: rgba(75, 61, 57, 0.3);
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .footer-logo {
@@ -1330,12 +1488,18 @@ img {
   color: #756157;
 }
 
-.footer-logo:focus {
+.footer-logo:focus-visible {
   color: #756157;
 }
 
+@supports not selector(:focus-visible) {
+  .footer-logo:focus {
+    color: #756157;
+  }
+}
+
 .footer-logo:active {
-  color: rgba(75, 61, 57, 0.3);
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /*Модальное окно*/
@@ -1345,12 +1509,12 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 
   display: grid;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  margin-top: 95px;
 
   background-color: rgba(242, 242, 242, 0.8);
 }
@@ -1381,21 +1545,54 @@ img {
   padding: 0;
 
   background-color: #f2f2f2;
-  background-image: url("../images/svg/vector.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 17px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
 }
 
-.modal-close-button:focus {
+.modal-close-button:focus-visible {
   background-color: #e6e6e6;
-  box-shadow: 0 0 0 3px #83b3d3;
+  border-color: #68a2ca;
+  outline: none;
+  box-shadow: 0 0 0 3px #68a2ca;
+}
+
+@supports not selector(:focus-visible) {
+  .modal-close-button:focus {
+    background-color: #e6e6e6;
+    border-color: #68a2ca;
+    outline: none;
+    box-shadow: 0 0 0 3px #68a2ca;
+  }
+}
+
+.modal-close-button:active {
+  opacity: 0.2;
 }
 
 .modal-title {
@@ -1542,10 +1739,26 @@ img {
   background-color: #000000;
 }
 
-.people-button:focus {
+.people-button:hover {
+  color: #000000;
+}
+
+.people-button:focus-visible {
   border: 3px solid #82b3d3;
   border-radius: 4px;
   outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .people-button:focus {
+    border: 3px solid #82b3d3;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+.people-button:active {
+  opacity: 0.2;
 }
 
 .people-button:active::after,
@@ -1583,9 +1796,18 @@ img {
   border-radius: 50%;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:hover ~ .tooltip-text {
   display: block;
+}
+
+.tooltip-toggle:focus-visible ~ .tooltip-text {
+  display: block;
+}
+
+@supports not selector(:focus-visible) {
+  .tooltip-toggle:focus + .tooltip-text {
+    display: block;
+  }
 }
 
 .tooltip-text {
