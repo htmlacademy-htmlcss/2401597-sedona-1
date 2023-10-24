@@ -335,13 +335,6 @@ img {
   opacity: 0.3;
 }
 
-.navigation-link:focus-visible {
-  background-color: #e6e6e6;
-  border-color: #83b3d3;
-  outline: none;
-  box-shadow: 0 0 0 3px #83b3d3;
-}
-
 .navigation-link-current {
   text-decoration: underline;
 
@@ -916,16 +909,9 @@ img {
   opacity: 0.6;
 }
 
-.control-label:focus-visible .control-input {
+.control-label:focus-within .control-input {
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
-}
-
-@supports not selector(:focus-visible) {
-  .control-label:focus .control-input {
-    outline: none;
-    box-shadow: 0 0 0 3px #83b3d3;
-  }
 }
 
 .control-label:active {
@@ -1162,7 +1148,7 @@ img {
 }
 
 .view-link:hover {
-  border-color: 2px solid #000000;
+  border-color: #000000;
 }
 
 .view-link:focus-visible {
@@ -1592,7 +1578,12 @@ img {
 }
 
 .modal-close-button:active {
-  opacity: 0.2;
+  background-color: #e6e6e6;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  opacity: 0.3;
 }
 
 .modal-title {
