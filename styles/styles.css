@@ -207,6 +207,19 @@ img {
   appearance: none;
 }
 
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.field[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 .field:hover {
   background-color: #e6e6e6;
   border-color: #e6e6e6;
@@ -302,6 +315,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 600px;
 
   gap: 32px;
 }
@@ -724,6 +738,7 @@ img {
 
   color: #ffffff;
 
+  background-color: #5c84ab;
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -881,7 +896,7 @@ img {
 }
 
 .control-input[type="checkbox"]:checked {
-  background-image: url("/images/svg/jackdaw.svg");
+  background-image: url("../images/svg/jackdaw.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px 10px;
@@ -954,19 +969,6 @@ img {
   line-height: 24px;
 
   border: none;
-}
-
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button {
-  margin: 0;
-
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.range-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
 }
 
 .range-input-min {
@@ -1396,12 +1398,13 @@ img {
 /*Сeкция Footer*/
 
 .page-footer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 40px 70px 30px;
+
+  grid-template-columns: 200px 1fr 200px;
 }
 
 .social {
@@ -1439,6 +1442,8 @@ img {
 }
 
 .footer-contacts-phono {
+  display: inline-block;
+
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -1669,12 +1674,6 @@ img {
   background: #f2f2f2;
   border: none;
   border-radius: 4px;
-}
-
-.people-input::-webkit-outer-spin-button,
-.people-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
 }
 
 .people-button {
