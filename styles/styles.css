@@ -191,7 +191,7 @@ img {
 .field {
   width: 100%;
   height: 48px;
-  padding: 13px 17px 10px;
+  padding: 13px 20px 10px;
 
   font-weight: 700;
   font-size: 18px;
@@ -200,7 +200,7 @@ img {
   color: #000000;
 
   background-color: #f2f2f2;
-  border-color: 2px solid transparent;
+  border: 2px solid transparent;
   border-radius: 4px;
 
   -webkit-appearance: none;
@@ -308,14 +308,14 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 600px;
+  max-width: 500px;
 
   gap: 32px;
 }
@@ -362,6 +362,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 150px;
+  margin-top: 9px;
 }
 
 .navigation-user-link {
@@ -423,6 +425,7 @@ img {
 
 .header-button {
   width: 160px;
+  margin-top: 14px;
 }
 
 /*Главный заголовок*/
@@ -835,7 +838,7 @@ img {
 }
 
 .filter-title {
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   font-weight: 700;
   font-size: 20px;
@@ -1404,11 +1407,13 @@ img {
   width: 100%;
   padding: 40px 70px 30px;
 
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 200px 1fr 172px;
 }
 
 .social {
   display: grid;
+  justify-content: start;
+  margin-top: 5px;
 
   grid-template-columns: repeat(3, auto);
 }
@@ -1417,8 +1422,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 50px;
+  width: 47px;
+  height: 40px;
 
   color: #82b3d3;
 }
@@ -1443,6 +1448,7 @@ img {
 
 .footer-contacts-phono {
   display: inline-block;
+  margin-top: 7px;
 
   font-size: 40px;
   line-height: 40px;
@@ -1471,8 +1477,11 @@ img {
 
 .footer-logo {
   height: 33px;
+  margin-top: 9px;
 
   color: #000000;
+
+  justify-self: end;
 }
 
 .footer-logo:hover {
