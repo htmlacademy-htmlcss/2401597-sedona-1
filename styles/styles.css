@@ -191,7 +191,7 @@ img {
 .field {
   width: 100%;
   height: 48px;
-  padding: 13px 17px 10px;
+  padding: 13px 20px 10px;
 
   font-weight: 700;
   font-size: 18px;
@@ -200,11 +200,24 @@ img {
   color: #000000;
 
   background-color: #f2f2f2;
-  border-color: 2px solid transparent;
+  border: 2px solid transparent;
   border-radius: 4px;
 
   -webkit-appearance: none;
   appearance: none;
+}
+
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.field[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .field:hover {
@@ -254,7 +267,7 @@ img {
   z-index: 1;
 
   display: grid;
-  align-items: center;
+  align-items: start;
   width: 100%;
   padding: 0 70px;
 
@@ -295,13 +308,14 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 500px;
 
   gap: 32px;
 }
@@ -348,6 +362,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 150px;
+  margin-top: 9px;
 }
 
 .navigation-user-link {
@@ -409,6 +425,7 @@ img {
 
 .header-button {
   width: 160px;
+  margin-top: 14px;
 }
 
 /*Главный заголовок*/
@@ -636,6 +653,7 @@ img {
 }
 
 /*Секция поиск*/
+
 .search {
   padding: 96px 70px;
 
@@ -724,6 +742,7 @@ img {
 
   color: #ffffff;
 
+  background-color: #5c84ab;
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -820,7 +839,7 @@ img {
 }
 
 .filter-title {
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   font-weight: 700;
   font-size: 20px;
@@ -881,7 +900,7 @@ img {
 }
 
 .control-input[type="checkbox"]:checked {
-  background-image: url("/images/svg/jackdaw.svg");
+  background-image: url("../images/svg/jackdaw.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px 10px;
@@ -954,19 +973,6 @@ img {
   line-height: 24px;
 
   border: none;
-}
-
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button {
-  margin: 0;
-
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.range-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
 }
 
 .range-input-min {
@@ -1396,16 +1402,19 @@ img {
 /*Сeкция Footer*/
 
 .page-footer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   width: 100%;
   padding: 40px 70px 30px;
+
+  grid-template-columns: 200px 1fr 172px;
 }
 
 .social {
   display: grid;
+  justify-content: start;
+  margin-top: 5px;
 
   grid-template-columns: repeat(3, auto);
 }
@@ -1414,8 +1423,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 50px;
+  width: 47px;
+  height: 40px;
 
   color: #82b3d3;
 }
@@ -1439,6 +1448,9 @@ img {
 }
 
 .footer-contacts-phono {
+  display: inline-block;
+  margin-top: 7px;
+
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -1466,8 +1478,11 @@ img {
 
 .footer-logo {
   height: 33px;
+  margin-top: 9px;
 
   color: #000000;
+
+  justify-self: end;
 }
 
 .footer-logo:hover {
@@ -1669,12 +1684,6 @@ img {
   background: #f2f2f2;
   border: none;
   border-radius: 4px;
-}
-
-.people-input::-webkit-outer-spin-button,
-.people-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
 }
 
 .people-button {
